@@ -45,10 +45,15 @@
                                     </li>
                                 </ul>
                             </li>
-
+                            
                         <?php
                             }
                         ?>
+                    </ul>
+                    <ul class="collapse list-unstyled ms-4" id="submenuManutencoes">
+                        <li class="nav-item">
+                            <a class="nav-link px-3 border-bottom" aria-current="page" href="<?= URL ?>acompanhamento/index"><i class="text-dark-blue bi bi-person-gear me-2"></i>Acompanhamento</a>
+                        </li>
                     </ul>
                 </div>
             </div>

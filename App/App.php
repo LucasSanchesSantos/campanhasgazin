@@ -20,6 +20,7 @@ class App
         define('URI', $_SERVER['REQUEST_URI']);
 
         define('PATH', realpath('./'));
+        define('PATH_USERS_IMG', "{$_ENV['PROTOCOL_SSL']}{$_SERVER['HTTP_HOST']}/");
         define('PATH_IMG', "{$_ENV['PROTOCOL_SSL']}{$_SERVER['HTTP_HOST']}/App/Views/Imagens/");
         define('PATH_JS', "{$_ENV['PROTOCOL_SSL']}{$_SERVER['HTTP_HOST']}/App/Views/JavaScript/");
         define('PATH_LOG', realpath('./') . '/log/');
