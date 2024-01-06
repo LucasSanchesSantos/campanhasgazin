@@ -1,0 +1,39 @@
+version: "3.8"
+services:
+  app:
+    container_name: desafiosgazin-app
+    image: cartazin
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./:/var/www/html
+    environment:
+      - XDEBUG_START_WITH_REQUEST=yes
+      - XDEBUG_DISCOVER_CLIENT_HOST=false
+    ports:
+      - "8082:80"
+    networks:
+      - desafiosgazin
+  
+  db:
+    image: mysql:8.0
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: desafiosgazin
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+      TZ: America/Sao_Paulo
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - desafiosgazin
+
+networks:
+  desafiosgazin:
+    name: desafiosgazin
+    driver: bridge
