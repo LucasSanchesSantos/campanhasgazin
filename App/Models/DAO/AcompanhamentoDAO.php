@@ -35,8 +35,8 @@ class AcompanhamentoDAO extends DAO
             select 
                 tb.campanha_ref
                 ,tb.idfilial
-                ,CONCAT(LPAD(f.empresa,2,'0'),'.',LPAD(f.numero ,3,'0'),' - ',f.cidade) as filial
-                ,u.caminho_imagem
+                ,f.cidade as filial
+                ,coalesce(u.caminho_imagem,'App/Views/Imagens/Colaboradores/gerente.png') as caminho_imagem
                 ,tb.ouro
                 ,tb.prata
                 ,tb.bronze
@@ -75,7 +75,7 @@ class AcompanhamentoDAO extends DAO
             left join filial f on f.id = tb.idfilial
         ) tb
         JOIN (SELECT @rank := 0) r
-        order by score desc, ouro desc, prata desc, bronze desc
+        order by score desc, ouro desc, prata desc, bronze desc, idfilial
         
         ";
     }

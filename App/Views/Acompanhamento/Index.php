@@ -1,35 +1,52 @@
+
 <div class="d-flex justify-content-between mb-4">
-    <h3 class="text-center"><i class="bi bi-printer"></i> Quantidade de impressões por filial</h3>
+    <h3 class="text-center"><i class=""></i> Classificações</h3>
 </div>
 
-<div class="table-responsive mt-2">
-    <table class="table table-hover" id="acompanhamentoTable">
-        <thead>
-            <tr>
-                <th class="text-center align-middle">Colocação</th>
-                <th class="text-center align-middle">Gerente</th>
-                <th class="text-center align-middle">Filial</th>
-                <th class="text-center align-middle">Ouro</th>
-                <th class="text-center align-middle">Prata</th>
-                <th class="text-center align-middle">Bronze</th>
-                <th class="text-center align-middle">Score</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($this->getViewVar()['acompanhamento'] as $acompanhamento) { ?>
-                <tr>
-                    <td class="text-center align-middle"><?= $acompanhamento['colocacao']?></td>
-                    <td class="text-center align-middle">
-                        <img src="<?= PATH_USERS_IMG . $acompanhamento['caminho_imagem'] ?>" alt="Imagem" width="50" height="50">
-                    </td>
-                    <td class="text-center align-middle"><?= $acompanhamento['filial']?></td>
-                    <td class="text-center align-middle"><?= $acompanhamento['ouro']?></td>
-                    <td class="text-center align-middle"><?= $acompanhamento['prata']?></td>
-                    <td class="text-center align-middle"><?= $acompanhamento['bronze']?></td>
-                    <td class="text-center align-middle"><?= $acompanhamento['score']?></td>
-                   
-                </tr>
-            <?php } ?>
-        </tbody>
-    </table>
-</div>
+<?php foreach ($this->getViewVar()['acompanhamento'] as $acompanhamento) { ?>
+    <div class="card mb-3 custom-card"> <!-- Adicionando a classe customizada para o card -->
+        <div class="row g-0">
+            <div class="col-md-2 text-center ">
+                <div class="card-body text-center custom-card-body"> <!-- Adicionando a classe customizada para o corpo do card -->
+                    <h5 class="custom-card-body-title">Colocação</h5>
+                    <p class="custom-card-body-text"><?= $acompanhamento['colocacao']?>ª</p>
+                </div>
+            </div>
+            <div class="col-md-3 text-center">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                    <img src="<?= PATH_USERS_IMG . $acompanhamento['caminho_imagem'] ?>" alt="Imagem" width="180" height="180" class="imagem-destaque"> <!-- Adicionando classe img-fluid para garantir a responsividade -->
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card-body text-center custom-card-body"> <!-- Adicionando a classe customizada para o corpo do card -->
+                    <h5 class="custom-card-body-title">Loja</h5>
+                    <p class="custom-card-body-text"><?= $acompanhamento['filial']?></p>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="card-body text-center custom-card-body"> <!-- Adicionando a classe customizada para o corpo do card -->
+                    <h5 class="custom-card-body-title">Ouro</h5>
+                    <p class="custom-card-body-text"><?= $acompanhamento['ouro']?></p>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="card-body text-center custom-card-body"> <!-- Adicionando a classe customizada para o corpo do card -->
+                    <h5 class="custom-card-body-title">Prata</h5>
+                    <p class="custom-card-body-text"><?= $acompanhamento['prata']?></p>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="card-body text-center custom-card-body"> <!-- Adicionando a classe customizada para o corpo do card -->
+                    <h5 class="custom-card-body-title">Bronze</h5>
+                    <p class="custom-card-body-text"><?= $acompanhamento['bronze']?></p>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card-body text-center custom-card-body"> <!-- Adicionando a classe customizada para o corpo do card -->
+                    <h5 class="custom-card-body-title">Score</h5>
+                    <p class="custom-card-body-text"><?= $acompanhamento['score']?></p>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php } ?>

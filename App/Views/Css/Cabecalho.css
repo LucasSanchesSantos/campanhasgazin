@@ -126,3 +126,39 @@ thead {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1040;
 }
+
+
+.custom-card {
+    border-radius: 10px; /* Borda arredondada */
+    border: none; /* Remove as bordas */
+    overflow: hidden; /* Esconde o overflow para a sombra não aparecer fora do card */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Sombra para fora na parte inferior */
+}
+
+.custom-card-body {
+    padding: 20px; /* Espaçamento interno do card */
+}
+
+.custom-card-body-title {
+    padding: 5px; /* Espaçamento interno do card */
+    margin-top: 60px; /* Espaçamento na parte superior */
+    width: 300px; /* largura do card */
+
+}
+.custom-card-body-text {
+    width: 300px; /* largura do card */
+      display: grid;
+      align-items: center; /* centraliza verticalmente */
+}
+
+
+/* Adicionando margens à imagem */
+.custom-card img {
+    margin-top: 40px; /* Espaçamento na parte superior */
+    margin-bottom: 40px; /* Espaçamento na parte inferior */
+    border: 6px solid rgb(223, 225, 226); /* Adicionando uma borda sólida de 2 pixels na cor amarela */
+}
+
+.imagem-destaque {
+  }
+  
