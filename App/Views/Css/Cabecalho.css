@@ -132,7 +132,7 @@ thead {
     border-radius: 10px; /* Borda arredondada */
     border: none; /* Remove as bordas */
     overflow: hidden; /* Esconde o overflow para a sombra não aparecer fora do card */
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Sombra para fora na parte inferior */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); /* Sombra para fora na parte inferior */
 }
 
 .custom-card-body {
@@ -141,7 +141,7 @@ thead {
 
 .custom-card-body-title {
     padding: 5px; /* Espaçamento interno do card */
-    margin-top: 60px; /* Espaçamento na parte superior */
+    margin-top: 60px; 
     width: 300px; /* largura do card */
 
 }
@@ -152,13 +152,25 @@ thead {
 }
 
 
-/* Adicionando margens à imagem */
-.custom-card img {
-    margin-top: 40px; /* Espaçamento na parte superior */
-    margin-bottom: 40px; /* Espaçamento na parte inferior */
-    border: 6px solid rgb(223, 225, 226); /* Adicionando uma borda sólida de 2 pixels na cor amarela */
+.imagem-destaque{
+    margin-top: 40px; 
+    margin-bottom: 40px; 
+    border: 6px solid rgb(223, 225, 226); 
 }
 
-.imagem-destaque {
-  }
-  
+.imagem-colocacao{
+    margin-left: 120px; 
+
+    margin-top: 40px; 
+    margin-bottom: 40px; 
+}
+
+
+.colocacao-format{
+    width: 300px;
+    margin-top: 80px; 
+    font-size: 40px;
+    color: rgb(90, 130, 171);
+    font-weight: bold;
+
+}

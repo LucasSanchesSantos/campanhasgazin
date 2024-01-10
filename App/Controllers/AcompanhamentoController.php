@@ -13,6 +13,7 @@ class AcompanhamentoController extends Controller
         $acompanhamentoDAO = new AcompanhamentoDAO();
 
         self::setViewParam('acompanhamento', $acompanhamentoDAO->listar());
+        self::setViewParam('acompanhamentoDetalhado', $acompanhamentoDAO->listarAcompanhamentoDetalhado());
 
         $this->render('acompanhamento/index');
     }

@@ -6,7 +6,7 @@
                     <form class="w-100" action="<?= URL ?>login/logar" method="post">
                         <div class="card-body p-5 text-center">
                             <div class="mb-4">
-                                <img src="<?= PATH_IMG ?>cartazeando.png" width="70%" alt="">
+                                <img src="<?= PATH_IMG ?>gazin58anos.png" width="70%" alt="">
                             </div>
 
                             <div class="form-outline mb-4">
