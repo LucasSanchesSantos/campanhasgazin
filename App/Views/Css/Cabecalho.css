@@ -174,3 +174,65 @@ thead {
     font-weight: bold;
 
 }
+
+.diagonal-background {
+    position: relative;
+    overflow: hidden; /* Evita que o triângulo ultrapasse os limites do card */
+    padding: 0;
+}
+
+.diagonal-background-white {
+    position: relative;
+    overflow: hidden; /* Evita que o triângulo ultrapasse os limites do card */
+}
+
+.diagonal-background-red {
+    position: relative;
+    overflow: hidden; /* Evita que o triângulo ultrapasse os limites do card */
+}
+
+
+.diagonal-background::after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 60px 60px 0; /* Triângulo na quina do card */
+    border-color: transparent transparent #00008B transparent; /* Azul */
+    z-index: 4; /* Segunda prioridade */
+    transform: rotate(90deg);
+}
+
+.diagonal-background-white::before{
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 80px 80px 0; /* Triângulo na quina do card */
+    border-color: transparent transparent #ffffff transparent; /* Branco */
+    z-index: 3; /* Terceira prioridade */
+    transform: rotate(90deg);
+    border: 10;
+    border-right: 10;
+
+}
+
+.diagonal-background-red::before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 100px 100px 0; /* Triângulo na quina do card */
+    border-color: transparent transparent #FF0000 transparent; /* Vermelho */
+    z-index: 0; /* Maior prioridade */
+    transform: rotate(90deg);
+    
+    
+}
+
+.diagonal-background::before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 40px 40px 0; /* Triângulo na quina do card */
+    border-color: transparent transparent #FFFFFF transparent; /* Branco */
+    z-index: 5; /* Menor prioridade */
+    transform: rotate(90deg);
+}
