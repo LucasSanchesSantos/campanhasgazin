@@ -30,31 +30,24 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div>
-                    <ul class="navbar-nav justify-content-end flex-grow-1">
 
+                    <ul class="navbar-nav justify-content-end flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link px-3 border-bottom" aria-current="page" href="<?= URL ?>acompanhamento/index"><i class="text-dark-blue bi bi-person-gear me-2"></i>Acompanhamento</a>
+                        </li>
                         <?php
                             if ($isAdministrativo) {
                         ?>
                             <li class="nav-item">
-                                <a class="nav-link px-3 border-bottom" aria-current="page" href="#" data-bs-toggle="collapse" data-bs-target="#submenuManutencoes" aria-expanded="false">
-                                    <i class="text-dark-blue bi bi-tools me-2"></i>Manutenções
-                                </a>
-                                <ul class="collapse list-unstyled ms-4" id="submenuManutencoes">
-                                    <li class="nav-item">
-                                        <a class="nav-link px-3 border-bottom" aria-current="page" href="<?= URL ?>usuario/index"><i class="text-dark-blue bi bi-person-gear me-2"></i>Usuários</a>
-                                    </li>
-                                </ul>
+                                <a class="nav-link px-3 border-bottom" aria-current="page" href="<?= URL ?>usuario/index"><i class="text-dark-blue bi bi-person-gear me-2"></i>Usuários</a>
                             </li>
-                            
                         <?php
                             }
                         ?>
                     </ul>
-                    <ul class="collapse list-unstyled ms-4" id="submenuManutencoes">
-                        <li class="nav-item">
-                            <a class="nav-link px-3 border-bottom" aria-current="page" href="<?= URL ?>acompanhamento/index"><i class="text-dark-blue bi bi-person-gear me-2"></i>Acompanhamento</a>
-                        </li>
-                    </ul>
+
+
+
                 </div>
             </div>
         </div>
