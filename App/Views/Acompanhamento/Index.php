@@ -27,34 +27,30 @@
                                 <img src="<?= PATH_USERS_IMG . $acompanhamento['caminho_imagem'] ?>" alt="Imagem" width="180" height="180" class="imagem-destaque"> 
                             </div>
                         </div>
-                        <div class="col-md-2">
-                            <div class="card-body text-center custom-card-body"> 
-                                <h5 class="custom-card-body-title" data-toggle="collapse" data-target="#collapse<?= $index ?>" aria-expanded="false" aria-controls="collapse<?= $index ?>">Loja</h5>
-                                <p class="custom-card-body-text"><?= $acompanhamento['filial']?></p>
-                            </div>
-                        </div>
-                        <div class="col-md-1">
-                            <div class="card-body text-center custom-card-body"> 
-                                <h5 class="custom-card-body-title">Ouro</h5>
-                                <p class="custom-card-body-text"><?= $acompanhamento['ouro']?></p>
-                            </div>
-                        </div>
-                        <div class="col-md-1">
-                            <div class="card-body text-center custom-card-body"> 
-                                <h5 class="custom-card-body-title">Prata</h5>
-                                <p class="custom-card-body-text"><?= $acompanhamento['prata']?></p>
-                            </div>
-                        </div>
-                        <div class="col-md-1">
-                            <div class="card-body text-center custom-card-body"> 
-                                <h5 class="custom-card-body-title">Bronze</h5>
-                                <p class="custom-card-body-text"><?= $acompanhamento['bronze']?></p>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="card-body text-center custom-card-body"> 
-                                <h5 class="custom-card-body-title">Score</h5>
-                                <p class="custom-card-body-text"><?= $acompanhamento['score']?></p>
+                        <div class="col-md-6">
+                            <div class="custom-margin">
+                                <div class="table-responsive mt-5">
+                                    <table class="table table-hover" id="acompanhamentoTable">
+                                        <thead class="thead-new">
+                                            <tr>
+                                                <th class="text-center align-middle">Filial</th>
+                                                <th class="text-center align-middle">Ouro</th>
+                                                <th class="text-center align-middle">Prata</th>
+                                                <th class="text-center align-middle">Bronze</th>
+                                                <th class="text-center align-middle" >Score</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                    <td class="text-center align-middle"><?= $acompanhamento['filial'] ?></td>
+                                                    <td class="text-center align-middle"><?= $acompanhamento['ouro'] ?></td>
+                                                    <td class="text-center align-middle"><?= $acompanhamento['prata'] ?></td>
+                                                    <td class="text-center align-middle"><?= $acompanhamento['bronze'] ?></td>
+                                                    <td class="text-center align-middle" style="font-weight: bold;"><?= $acompanhamento['score'] ?></td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -63,7 +59,7 @@
             <div id="collapse<?= $index ?>" class="collapse" aria-labelledby="heading<?= $index ?>" data-parent=".accordion">
                 <div class="card-body">
                     <div class="table-responsive mt-2">
-                        <table class="table table-hover" id="impressoesTable">
+                        <table class="table table-hover" id="acompanhamentoTable">
                             <thead>
                                 <tr>
                                     <th class="text-center align-middle">Campanha</th>
@@ -83,7 +79,7 @@
                                             <td class="text-center align-middle"><?= $acompanhamentoDetalhado['ouro'] ?></td>
                                             <td class="text-center align-middle"><?= $acompanhamentoDetalhado['prata'] ?></td>
                                             <td class="text-center align-middle"><?= $acompanhamentoDetalhado['bronze'] ?></td>
-                                            <td class="text-center align-middle"><?= $acompanhamentoDetalhado['score'] ?></td>
+                                            <td class="text-center align-middle" style="font-weight: bold;"><?= $acompanhamentoDetalhado['score'] ?></td>
                                         </tr>
                                     <?php } ?>
                                 <?php } ?>

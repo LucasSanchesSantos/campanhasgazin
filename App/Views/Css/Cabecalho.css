@@ -3,10 +3,14 @@
 }
 
 thead {
-    background-color: #1b4e8d;
+    background-color: #8193a8;
     color: white;
 }
 
+.thead-new {
+    background-color: #1d1ddb;
+    color: white;
+}
 .bg-grey {
     background-color: #e2e5ea;
 }
@@ -158,11 +162,16 @@ thead {
     border: 6px solid rgb(223, 225, 226); 
 }
 
-.imagem-colocacao{
-    margin-left: 120px; 
+.imagem-colocacao {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
 
-    margin-top: 40px; 
-    margin-bottom: 40px; 
+@media only screen and (min-width: 768px) {
+    /* Aplique a margem apenas em telas maiores que 768 pixels de largura (desktop) */
+    .imagem-colocacao {
+        margin-left: 120px;
+    }
 }
 
 
@@ -189,6 +198,12 @@ thead {
 .diagonal-background-red {
     position: relative;
     overflow: hidden; /* Evita que o triângulo ultrapasse os limites do card */
+}
+
+.blue-background {
+    background-color: blue;
+    color: white; /* Altere a cor do texto conforme necessário para contrastar com o fundo */
+    padding: 5px; /* Adicione algum preenchimento para melhor aparência */
 }
 
 
@@ -235,4 +250,14 @@ thead {
     border-color: transparent transparent #FFFFFF transparent; /* Branco */
     z-index: 5; /* Menor prioridade */
     transform: rotate(90deg);
+}
+
+
+.custom-card-body-title-divider {
+    border-bottom: 1px solid #ccc; /* Adjust the color as needed */
+    margin-bottom: 10px; /* Adjust the spacing as needed */
+}
+
+.custom-margin {
+    margin-top: 90px;
 }
