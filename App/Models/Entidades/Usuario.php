@@ -16,6 +16,7 @@ class Usuario extends Entity
     protected int $idTipoFormato;
     protected int $idTipoPermissao;
     protected ?string $caminhoImagem;
+    protected ?string $telefone;
 
     public function __construct(array $usuario)
     {
@@ -29,6 +30,8 @@ class Usuario extends Entity
         $this->setIdTipoFormato($usuario['idTipoFormato']);
         $this->setIdTipoPermissao($usuario['idTipoPermissao']);
         $this->setCaminhoImagem($usuario['caminho_imagem']);
+        $this->setTelefone($usuario['telefone']);
+
     }
 
     public function getId(): int
@@ -147,6 +150,18 @@ class Usuario extends Entity
     private function setCaminhoImagem(?string $caminhoImagem): self
     {
         $this->caminhoImagem = $caminhoImagem;
+
+        return $this;
+    }
+
+    public function getTelefone(): ?string
+    {
+        return $this->telefone;
+    }
+
+    private function setTelefone(?string $telefone): self
+    {
+        $this->telefone = $telefone;
 
         return $this;
     }

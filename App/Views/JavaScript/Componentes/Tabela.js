@@ -20,3 +20,20 @@ $(document).ready(async () => {
         ]
     });
 })
+
+var cards = document.querySelectorAll('.custom-card');
+
+cards.forEach(function(card, index) {
+    card.addEventListener('click', function() {
+        var collapseId = "#collapse" + index;
+        var collapse = document.querySelector(collapseId);
+        if (collapse) {
+            $(collapse).collapse('toggle');
+        }
+    });
+});
+
+
+$(document).ready(function(){
+    $('#telefone').mask('(00) 0 0000-0000', {placeholder: " "});
+});

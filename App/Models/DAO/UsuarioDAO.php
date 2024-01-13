@@ -76,8 +76,9 @@ class UsuarioDAO extends DAO
     private function getSqlDadosUsuario(): string
     {
         return "SELECT
-                u.*
-                ,CONCAT(f.numero,' - ',f.cidade) as filial
+                coalesce(u.caminho_imagem,'App/Views/Imagens/Colaboradores/gerente.png') as caminho_imagem_usuario
+                ,u.*
+                ,f.cidade as filial
             FROM
                 usuario u
                 left join filial f on f.id = u.id_filial

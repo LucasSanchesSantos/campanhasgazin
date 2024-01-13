@@ -99,7 +99,7 @@ class UsuarioController extends Controller
             Sessao::gravaErro("Erro ao editar usuário.");
         }
 
-        $this->redirect('usuario', "index");
+        $this->redirect('usuario', "edicao");
     }
 
     private function getDadosUsuario(): array
@@ -138,7 +138,8 @@ class UsuarioController extends Controller
                 'senha' => $this->getSenha(intval($_POST['id'])),
                 'idTipoFormato' => 1,
                 'idTipoPermissao' => intval($_POST['idTipoPermissao']),
-                'caminho_imagem' => strval($caminhoImagem)
+                'caminho_imagem' => strval($caminhoImagem),
+                'telefone' => strval($_POST['telefone']),
             ];
         }
 
@@ -151,7 +152,8 @@ class UsuarioController extends Controller
             'usuario' => strval($usuarioLogado['usuario']),
             'senha' => $this->getSenha(intval($usuarioLogado['id'])),
             'idTipoFormato' => 1,
-            'idTipoPermissao' => intval($usuarioLogado['id_tipo_permissao'])
+            'idTipoPermissao' => intval($usuarioLogado['id_tipo_permissao']),
+            'telefone' => strval($usuarioLogado['telefone'])
         ];
     }
 
